@@ -1,0 +1,13 @@
+SELECT * FROM tracks INNER JOIN albums ON tracks.albumid = albums.albumid WHERE albums.title = "Led Zeppelin III";
+
+SELECT * FROM playlist_track INNER JOIN tracks ON playlist_track.trackid = tracks.trackid WHERE playlist_track.playlistid = "1";
+
+SELECT * FROM playlists INNER JOIN playlist_track ON playlists.playlistid = playlist_track.playlistid INNER JOIN tracks ON playlist_track.trackid = tracks.trackid WHERE playlists.name = "Grunge" ;
+
+SELECT * FROM playlists INNER JOIN playlist_track ON playlists.playlistid = playlist_track.playlistid INNER JOIN tracks ON playlist_track.trackid = tracks.trackid;
+
+Select * FROM playlists;
+
+DELETE FROM playlist_track WHERE playlistid IS NULL;
+
+SELECT * FROM playlist_track LEFT OUTER JOIN playlists ON playlists.playlistid = playlist_track.playlistid WHERE playlists.playlistid IS NULL;

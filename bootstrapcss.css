@@ -1,0 +1,14 @@
+button#headbutton{
+    background-color:bisque;
+    color: black;
+}
+
+section#news{
+    color: red;
+}
+
+@media(min-width: 768px){
+    .news-input{
+        width:50%;   
+    }
+}
